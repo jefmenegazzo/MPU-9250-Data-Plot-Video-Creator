@@ -3,6 +3,7 @@
         "**/.git": true,
         "**/__pycache__": true,
         ".gitignore": true,
+        ".vscode": true,
     },
     "python.pythonPath": "C:\\ProgramData\\Anaconda3\\python.exe"
 }

@@ -18,7 +18,10 @@ class DataJoin:
                 if file.startswith('part_') and file.endswith('.mp4'):
                     parts.append(os.path.join(root, file))
         
-        parts.sort()
+        def order_parts(value):
+            return int(value[value.rindex("_") + 1: value.rindex(".")])
+
+        parts = sorted(parts, key = order_parts)
         return parts
 
     def joinParts(self, parts):
