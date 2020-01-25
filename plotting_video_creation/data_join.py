@@ -19,7 +19,7 @@ class DataJoin:
                     parts.append(os.path.join(root, file))
         
         def order_parts(value):
-            return int(value[value.index("_") + 1: value.index(".")])
+            return int(value[value.rindex("_") + 1: value.rindex(".")])
 
         parts = sorted(parts, key = order_parts)
         return parts

@@ -1,10 +1,11 @@
+import os
 import numpy as np
 from tqdm import tqdm
 import matplotlib.pyplot as plt
 from matplotlib.animation import FuncAnimation
 
 from data_source import DataSource
-from settings import folder, videos_folder
+from settings import videos_folder
 from util import parseTimestampToDate
 
 class DataPlot:
@@ -24,8 +25,6 @@ class DataPlot:
 
     fig = None
     gs = None
-    load_bar = None
-    videos_folder = None
     
     # Getters para Data Source
 
@@ -56,8 +55,6 @@ class DataPlot:
         self.start = self.part * self.count
         self.end = min(((self.part + 1) * self.count), self.size) - 1
         self.count = self.end - self.start + 1
-        
-        self.load_bar = tqdm(total=self.count, position=self.part, desc='Part ' + str(self.part), ascii=True)
 
     def createLine(self, axes, ydata, color, label):
 
@@ -68,7 +65,7 @@ class DataPlot:
         self.linesAll.append(line)
         self.sourcesAll.append(ydata)
 
-    def createSubPlotLegent(self):
+    def createSubPlotLegend(self):
 
         self.axesLegend = self.fig.add_subplot(self.gs[0, 2])
         self.axesLegend.set_axis_off()
@@ -129,7 +126,7 @@ class DataPlot:
         self.createSubPlot(loc=[3,1], xlabel='Sample Number', field='mag_y')
         self.createSubPlot(loc=[3,2], xlabel='Sample Number', field='mag_z')
 
-        self.createSubPlotLegent()
+        self.createSubPlotLegend()
 
     # Plot no Notebook
     def show(self):
@@ -168,6 +165,7 @@ class DataPlot:
     def plot(self, save=False, show=False):
 
         linesTuple = tuple(self.linesAll)
+        load_bar = tqdm(total=self.count, position=self.part, desc='Part ' + str(self.part), ascii=True, ncols=200)
 
         def init():
             self.clear()
@@ -179,12 +177,12 @@ class DataPlot:
             return linesTuple
         
         def progress(current_frame: int, total_frames: int):
-            self.load_bar.update(1)
+            load_bar.update(1)
 
         anim = FuncAnimation(self.fig, animate, init_func=init, frames= self.count, repeat=False, interval=self.interval)
 
         if save:
-            anim.save(videos_folder + "part_" + str(self.part) + ".mp4", fps=self.fps, extra_args=['-vcodec', 'libx264'], progress_callback=progress)
+            anim.save(os.path.join(videos_folder, "part_" + str(self.part) + ".mp4"), fps=self.fps, extra_args=['-vcodec', 'libx264'], progress_callback=progress)
 
         if show:
             plt.show()

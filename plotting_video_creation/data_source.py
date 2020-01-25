@@ -1,6 +1,7 @@
 import pandas as pd
 
-from settings import folder, data_file, ini_video, end_video
+from settings import data_file, ini_video, end_video
+from util import parseTimestampToDate
 
 class DataSource:
 
@@ -17,7 +18,7 @@ class DataSource:
     def load(self):
 
         # Carrega os dados
-        data = pd.read_csv(folder + data_file, float_precision="high")
+        data = pd.read_csv(data_file, float_precision="high")
 
         # Corta Dados
         self.data = self.cutData(data)
@@ -33,6 +34,11 @@ class DataSource:
 
     # Corta dados para ficar no intervalo de vídeo
     def cutData(self, data):
-        ini_index = data[data['timestamp'] == ini_video].index.values[0]
-        end_index = data[data['timestamp'] == end_video].index.values[0]
+
+        ini_df = data[data['timestamp'] == ini_video].index
+        end_df = data[data['timestamp'] == end_video].index
+
+        ini_index = ini_df.values[0] if len(ini_df) > 0 else 0
+        end_index = end_df.values[0] if len(end_df) > 0 else -1
+
         return data[ini_index: end_index + 1]
