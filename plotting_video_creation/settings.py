@@ -30,22 +30,30 @@ workspace = {
         "end": "2019-12-25T18:38:50"
     },
     "bravo-3": {
-        
+        "folder": 'E:\\Dados Processados\\100 Hz\\PVS 6\\',
+        "ini": "2019-12-25T18:44:21",
+        "end": "2019-12-25T18:59:57"
     },
     "palio-1": {
-        
+        "folder": 'E:\\Dados Processados\\100 Hz\\PVS 7\\',
+        "ini": "2019-12-26T18:24:10",
+        "end": "2019-12-26T18:45:09"
     },
     "palio-2": {
-        
+        "folder": 'E:\\Dados Processados\\100 Hz\\PVS 8\\',
+        "ini": "2019-12-26T18:51:04",
+        "end": "2019-12-26T19:11:17"
     },
     "palio-3": {
-        
+        "folder": 'E:\\Dados Processados\\100 Hz\\PVS 9\\',
+        "ini": "2019-12-26T19:23:32",
+        "end": "2019-12-26T19:38:31"
     },
 }
 
 #######################################################################################
 
-dataset = workspace['saveiro-3']
+dataset = workspace['saveiro-1']
 folder = dataset['folder']
 
 side = "left"
