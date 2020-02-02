@@ -1,0 +1,1 @@
+This is an application that uses matplotlib to generate animated plots, generating the video in parallel mode with joining by FFmpeg.

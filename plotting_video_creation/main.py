@@ -5,6 +5,7 @@ from multiprocessing import Process
 
 from data_plot import DataPlot
 from data_join import DataJoin
+from data_source import DataSource
        
 def plot(part, count, save=False, show=False):
 
@@ -38,7 +39,7 @@ def runSave(start, end, count):
 
 if __name__ == '__main__':
     
-    size = DataPlot(0, -1).size
+    size = DataSource().size
 
     count = 10000
     parts = int(size/count)
