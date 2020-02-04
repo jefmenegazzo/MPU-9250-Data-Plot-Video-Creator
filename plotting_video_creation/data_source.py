@@ -9,6 +9,7 @@ class DataSource:
     size = None
     fps = None
     interval = None
+    sample_start = 0
 
     # Construtor
     def __init__(self):
@@ -40,5 +41,7 @@ class DataSource:
 
         ini_index = ini_df.values[0] if len(ini_df) > 0 else 0
         end_index = end_df.values[0] if len(end_df) > 0 else -1
+
+        self.sample_start = ini_index
 
         return data[ini_index: end_index + 1]
