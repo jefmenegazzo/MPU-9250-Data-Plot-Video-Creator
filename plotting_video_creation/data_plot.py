@@ -44,6 +44,10 @@ class DataPlot:
     def size(self):
         return self.data_source.size
 
+    @property
+    def sample_start(self):
+        return self.data_source.sample_start
+
     def __init__(self, part, count):
  
         self.data_source = DataSource()
@@ -160,8 +164,8 @@ class DataPlot:
             # self.axesAll[j].relim() 
             # self.axesAll[j].autoscale_view()
         
-        self.axesLegend.set_title("Time: " + parseTimestampToDate(self.data['timestamp'].iloc[position]), fontdict = {'fontsize' : 10})
-        
+        self.axesLegend.set_title("Time: " + parseTimestampToDate(self.data['timestamp'].iloc[position]) + " | Sample: " + str(self.sample_start + position), fontdict = {'fontsize' : 10})
+
     def plot(self, save=False, show=False):
 
         linesTuple = tuple(self.linesAll)
