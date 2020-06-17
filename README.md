@@ -4,7 +4,7 @@
 ![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)
 ![GitHub issues](https://img.shields.io/github/issues/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator) 
 
-# MPU-9250 Data Plot Creator
+# MPU-9250 Data Plot Video Creator
 
 This is an application that creates videos with a plot of the data sampled from the sensors of the MPU-9250 (accelerometer, gyroscope and magnetometer) and GPS data (speed). The libraries matplotlib and ffmpeg are used. To use the functionality, you need to download [ffmpeg](https://ffmpeg.org/download.html) and add to environment variables. Next, just configure the variables in **settings.py**:
 
