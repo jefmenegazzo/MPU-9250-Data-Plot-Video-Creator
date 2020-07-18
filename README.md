@@ -1,8 +1,20 @@
-[![GitHub](https://img.shields.io/github/license/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator)](LICENSE) 
-![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator) 
-![pypi](https://img.shields.io/pypi/v/pybadges.svg)
-![versions](https://img.shields.io/pypi/pyversions/pybadges.svg)
-![GitHub issues](https://img.shields.io/github/issues/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator) 
+<div align="center">
+
+[![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://img.shields.io/badge/Project_Status-Active-green?style=flat-square&color=success)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator)
+[![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square&color=success)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator)
+[![GitHub](https://img.shields.io/github/license/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square&color=success)](LICENSE)
+![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square) 
+![pypi](https://img.shields.io/pypi/v/pybadges.svg?style=flat-square)
+![versions](https://img.shields.io/pypi/pyversions/pybadges.svg?style=flat-square)
+
+[![GitHub issues](https://img.shields.io/github/issues/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/issues)
+[![GitHub forks](https://img.shields.io/github/forks/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/network/members)
+[![GitHub stars](https://img.shields.io/github/stars/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/stargazers)
+[![GitHub watchers](https://img.shields.io/github/watchers/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/watchers)
+[![GitHub contributors](https://img.shields.io/github/contributors/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square&color=success)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/graphs/contributors/)
+[![HitCount](http://hits.dwyl.io/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/badges.svg)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator)
+
+</div>
 
 # MPU-9250 Data Plot Video Creator
 
