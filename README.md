@@ -18,7 +18,26 @@
 
 # MPU-9250 Data Plot Video Creator
 
-This is an application that creates videos with a plot of the data sampled from the sensors of the MPU-9250 (accelerometer, gyroscope and magnetometer) and GPS data (speed). The libraries matplotlib and ffmpeg are used. To use the functionality, you need to download [ffmpeg](https://ffmpeg.org/download.html) and add to environment variables. Next, just configure the variables in **settings.py**:
+This is an application that creates videos with data plotted in graph through the libraries matplotlib and ffmpeg. The plotted data correspond to samples from the sensors embedded in the module MPU-9250 (accelerometer, gyroscope and magnetometer) and GPS data (speed). 
+
+## Table of Contents
+- [Instalation](#Instalation)
+- [How To Use](#How-To-Use)
+- [Example](#Example)
+
+## Instalation
+ 
+First, clone this repository:
+
+```bash
+git clone https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator.git
+```
+
+Next, you need to download [ffmpeg](https://ffmpeg.org/download.html) and add to environment variables. 
+
+## How To Use
+
+To generate the videos, first configure the variables in the file **settings.py**:
 
 - **dataset**: dataset to be plotted.
     - **folder**: folder where the data is.
@@ -26,8 +45,22 @@ This is an application that creates videos with a plot of the data sampled from 
     - **end**: time the plot ends.
 - **side**: side to be plotted (left or right).
 
-After configuration, just run with the command:
+After configuration, run the following command to create the video:
 
 ```bash
-python main.py
+python src/plot_video.py
 ```
+
+Or run the following command to show live graph:
+
+```bash
+python src/plot_show.py
+```
+
+## Example
+
+Below, an example of a frame from one of the generated videos.
+
+<div align="center">
+    <img src="./doc/signals.png" alt="Sensor Hardware Network" align="center"/>
+</div>
