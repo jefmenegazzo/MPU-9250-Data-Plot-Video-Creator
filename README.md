@@ -64,3 +64,9 @@ Below, an example of a frame from one of the generated videos.
 <div align="center">
     <img src="./doc/signals.png" alt="Sensor Hardware Network" align="center"/>
 </div>
+
+To join videos side by side, we used the following command:
+
+```bash
+ffmpeg -i video1.mp4 -i video2.mp4 -filter_complex '[0:v]pad=iw*2:ih[int];[int][1:v]overlay=W/2:0[vid]' -map [vid] -c:v libx264 -crf 23 -preset veryfast output.mp4
+```
