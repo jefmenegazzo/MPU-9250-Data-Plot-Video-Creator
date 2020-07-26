@@ -1,20 +1,16 @@
-<div align="center">
-
 [![Project Status: Active – The project has reached a stable, usable state and is being actively developed.](https://img.shields.io/badge/Project_Status-Active-green?style=flat-square&color=success)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator)
 [![Maintenance](https://img.shields.io/badge/Maintained%3F-yes-green.svg?style=flat-square&color=success)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator)
 [![GitHub](https://img.shields.io/github/license/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square&color=success)](LICENSE)
 ![GitHub tag (latest by date)](https://img.shields.io/github/v/tag/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square) 
 ![pypi](https://img.shields.io/pypi/v/pybadges.svg?style=flat-square)
 ![versions](https://img.shields.io/pypi/pyversions/pybadges.svg?style=flat-square)
-
+[![DOI](https://img.shields.io/badge/DOI-10.5281%2Fzenodo.3960614-blue?style=flat-square)](https://doi.org/10.5281/zenodo.3960614)
 [![GitHub issues](https://img.shields.io/github/issues/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/issues)
 [![GitHub forks](https://img.shields.io/github/forks/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/network/members)
 [![GitHub stars](https://img.shields.io/github/stars/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/stargazers)
 [![GitHub watchers](https://img.shields.io/github/watchers/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/watchers)
 [![GitHub contributors](https://img.shields.io/github/contributors/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator?style=flat-square&color=success)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/graphs/contributors/)
 [![HitCount](http://hits.dwyl.io/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator/badges.svg)](https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator)
-
-</div>
 
 # MPU-9250 Data Plot Video Creator
 
@@ -24,6 +20,7 @@ This is an application that creates videos with data plotted in graph through th
 - [Instalation](#Instalation)
 - [How To Use](#How-To-Use)
 - [Example](#Example)
+- [How To Cite](#How-To-Cite)
 
 ## Instalation
  
@@ -69,4 +66,25 @@ To join videos side by side, we used the following command:
 
 ```bash
 ffmpeg -i video1.mp4 -i video2.mp4 -filter_complex '[0:v]pad=iw*2:ih[int];[int][1:v]overlay=W/2:0[vid]' -map [vid] -c:v libx264 -crf 23 -preset veryfast output.mp4
+```
+<!-- 
+ffmpeg -i video_environment.mp4 -i video_dataset_left.mp4 -filter_complex '[0:v]scale=iw*1.25:ih*1.25,pad=iw*2:ih[int];[int][1:v]overlay=W/2:0[vid]' -map [vid] -c:v libx264 -crf 23 -preset veryfast video_environment_dataset_left.mp4
+
+ffmpeg -i video_environment.mp4 -i video_dataset_right.mp4 -filter_complex '[0:v]scale=iw*1.25:ih*1.25,pad=iw*2:ih[int];[int][1:v]overlay=W/2:0[vid]' -map [vid] -c:v libx264 -crf 23 -preset veryfast video_environment_dataset_right.mp4 -->
+
+## How To Cite
+
+To cite this repository, use the reference below:
+
+```bibtex
+@software{menegazzo3960614,
+    author = {Jeferson Menegazzo and Aldo von Wangenheim},
+    title = {{MPU-9250 Data Plot Video Creator}},
+    month = jul,
+    year = 2020,
+    publisher = {Zenodo},
+    version = {1.0.5},
+    doi = {10.5281/zenodo.3960614},
+    url = {https://github.com/Intelligent-Vehicle-Perception/MPU-9250-Data-Plot-Video-Creator}
+}
 ```
